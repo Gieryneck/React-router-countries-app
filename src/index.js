@@ -1,16 +1,19 @@
 import React from 'react';
 import { render } from 'react-dom';
+import { Router, hashHistory } from 'react-router';
 import { Provider } from 'react-redux';
 import store from './store/store';
-import DevTools from './devtools';
+import routes from './routes';
+
+
 
 import {getCountries} from './actions/actions-countries';
 
 
 render(
     <Provider store={store}>
-        
-        <DevTools />
+        <Router history={hashHistory} routes={routes}>
+        </Router> 
     </Provider>,
     document.getElementById('root')
 );
