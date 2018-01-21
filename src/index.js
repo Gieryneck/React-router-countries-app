@@ -4,10 +4,10 @@ import { Router, hashHistory } from 'react-router';
 import { Provider } from 'react-redux';
 import store from './store/store';
 import routes from './routes';
+import { getCountries } from './actions/actions-countries';
 
 
 
-import {getCountries} from './actions/actions-countries';
 
 
 render(
@@ -20,7 +20,3 @@ render(
 
 store.dispatch(getCountries());
 
-/* 
-<Provider> czyni store dostępnym dla wszystkich zdefiniowanych w aplikacji 
-komponentów kontenerowych bez konieczności jawnego przekazywania go do nich.
-*/
